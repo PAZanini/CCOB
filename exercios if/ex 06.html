@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        #div_prest
+        {
+            font-weight: bold;
+            color: red;
+        }
+
+    </style>
+
+<body> 
+    qual sua renda familiar?
+    <input id="inp_renda" type="number">
+    qual sua prestação?
+    <input id="inp_prest" type="number">
+    <div id="div_msg"></div>
+    <button onclick="calc()">Verificar financiament</button>
+</body>
+</html> 
+<script>
+
+    function calc()
+    {
+        var renda = Number(inp_renda.value)
+        var prest = Number(inp_prest.value)
+        var calcP = prest / renda  * 100
+
+        div_msg.innerHTML = `A prestação corresponde a ${calcP}% da renda familiar`
+
+        if (calcP > 30)
+        {
+            div_msg.innerHTML += `<div id="div_prest"> Será necessário complementar a renda familiar </div>` 
+        }
+    }
+
+</script>

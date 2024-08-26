@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        #div_neg
+        {
+            font-weight: bold;
+            color: red;
+        }
+
+    </style>
+
+<body> 
+    qual seu saldo?
+    <input id="inp_saldo" type="number">
+    qual seu debito?
+    <input id="inp_debi" type="number">
+    <div id="div_msg"></div>
+    <button onclick="calc()">Analisar conta</button>
+</body>
+</html> 
+<script>
+
+    function calc()
+    {
+        var saldo = Number(inp_saldo.value)
+        var debito = Number(inp_debi.value)
+        var calcP = saldo - debito
+
+        
+
+        if (calcP >= 0)
+        {
+            div_msg.innerHTML = `O saldo atual da conta corrente é ${calcP}`
+        } else
+        {
+            div_msg.innerHTML = `<div id = "div_neg">O saldo atual da conta corrente é ${calcP} </div>`
+            
+        }
+    }
+
+</script>

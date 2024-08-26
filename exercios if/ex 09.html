@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    qual foi a ultima serie que vc assistiu?
+    <input id="inp_serie">
+    
+    quantos episodios vc assistiu?
+    <input id="inp_eps" type="number">
+
+    <button onclick="verificar()">Verificar nível</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar()
+    {
+        var nomeSerie = inp_serie.value
+        var horas = (Number(inp_eps.value) * 22) / 60
+        div_msg.innerHTML = `Vejo que você gosta da série ${nomeSerie} <br>`
+        
+
+        if(horas > 30) 
+        {
+            div_msg.innerHTML += `Uau, você realmente gosta dessa série!`
+        }
+    }
+</script>
