@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    qual o salario
+    <input id="inp_salario">
+    qual o adicional
+    <input id="inp_adicional">
+    qual o bonus
+    <input id="inp_bonus">
+
+    <button onclick="calc()">Analizar minha renda</button>
+
+    <div id="div_tabela"></div>
+
+    <div id="div_investimento"></div>
+
+
+</body>
+</html>
+
+<script>
+
+    function calc()
+    {
+        var salario = Number(inp_salario.value)
+        var bonus =  Number(inp_bonus.value)
+        var adc = Number(inp_adicional.value)
+
+        var bruto = salario + bonus + adc
+       
+        var bruto_ir = bruto
+        
+
+        if (bruto >= 10000)
+        {
+            var ir = bruto * 0.125
+            bruto_ir = bruto - ir
+        } else {
+            ir = 0
+        }
+        var inss = bruto_ir * 0.1
+        var fgts = bruto_ir * 0.08
+        var liquido = bruto - (inss + ir + fgts) 
+
+        div_tabela.innerHTML = `Com o salário de R$${salario}, com adicional
+        de R$${adc} e bônus de R$${bonus}, você tem: <br> 
+            Bruto: R$${bruto}  
+            <br>
+            IR: R$${ir}  
+            <br>
+            INSS: R$${inss} 
+            <br>
+            FGTS: R$${fgts} 
+            <br>
+            Líquido: R$${liquido}`
+
+            var invest = liquido * 0.15
+            var invest_ano = invest * 12
+
+            if(liquido > 2500) 
+            {
+                div_investimento.innerHTML = `Com a renda de R$${liquido},
+                é recomendado poupar R$${invest}, para que em um ano tenha poupado R$${invest_ano}`
+            } else 
+            {
+             div_investimento.innerHTML = `Com a renda de R$${liquido}, é recomendado obter renda extra para realizar uma poupança.`
+            }
+    }
+
+</script>

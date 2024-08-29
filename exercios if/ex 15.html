@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o saldo da conta?
+    <input id="inp_saldo">
+    Qual o debito?
+    <input id="inp_debito">
+
+    <button onclick="calcD()">Analisar conta</button>
+
+    <div id="div_saldo"></div>
+</body>
+</html>
+
+<script>
+
+    function calcD()
+    {
+        var saldo = Number(inp_saldo.value)
+        var deb = Number(inp_debito.value)
+
+        var calc = saldo - deb
+
+        if (calc > 0) 
+        {
+            div_saldo.innerHTML = `<p style='color: blue'> ${calc} </p>`
+        } else {
+            div_saldo.innerHTML = `<p style='color: red'> ${calc} </p>`
+        }
+    }
+
+</script>

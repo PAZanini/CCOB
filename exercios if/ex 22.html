@@ -1,0 +1,62 @@
+<!-- Agostinho é um taxista do Rio de Janeiro que deseja automatizar sua frota de táxis (Carrara Drivers). Faça um programa em HTML/JS que: 
+
+a) Tenha um campo para nome do passageiro   
+
+b) Tenha um campo para a distância (em km) do local atual para o destino do passageiro 
+
+c) Tenha um campo - que só aceita número - que recebe a informação da bandeira da corrida (o valor deve ser apenas 1, 2 ou 3) 
+
+    c1) Este campo só pode aceitar números e valores entre 1 e 3 
+
+d) Tenha um campo que recebe o horário da corrida (sistema de 24 horas e somente horas inteiras) 
+
+    d1) Este campo só pode aceitar números e valores entre 0 e 23 
+
+e) Ao clicar em "Calcular corrida", informe ao passageiro o valor final da corrida, com uma frase assim: 
+
+    "Olá NOME Sua corrida, será na bandeira X, percorrerá Y km e o total da corrida será de Z" 
+
+    e1) Siga a tabela abaixo para calcular o adicional por bandeira e horário:  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o nome do passsagerio
+    <input id="inp_pas">
+    <input id="inp_band" max="3" min="1" type="number">
+    <input id="inp_hora" max="23" min="0" type="number">
+    <input id="inp_dist">
+
+    <button onclick="corr()">Calcular corrida</button>
+</body>
+</html>
+
+<script>
+
+    function corr()
+    {
+        var pas = Nubmer(inp_pas.value)
+        var band = Nubmer(inp_band.value)
+        var hora = Nubmer(inp_hora.value)
+        var dist = Nubmer(inp_dist.valu)
+        var acrescimo = 0.15
+        var base = dist * 1.25
+
+        if(hora <= 6)
+        {
+            valor = base + acrescimo * base
+        }
+        if (hora >= 13) 
+        {
+            valor = base + (acrescimo + 0.05) * base
+        }
+ 
+    }
+    
+
+</script>

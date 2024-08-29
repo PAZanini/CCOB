@@ -1,0 +1,42 @@
+<!-- a) Solicita a temperatura do ambiente 
+
+b) Ao clicar em "Verificar clima", determine se o clima está: 
+
+    Apropriada p/ conservar alimento - Caso a temperatura for menor que 10 
+
+    Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10 
+
+c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado. Caso contrário, exiba a imagem de um alimento estragado  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    Qual a temperatura hoje?
+    <input id="inp_clima">
+    <button onclick="clima()">Verificar clima</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+
+    function clima()
+    {
+        var temp = Number(inp_clima.value)
+
+        if(temp < 10) 
+        {
+            div_msg.innerHTML = `Apropriada p/ conservar alimento <br> <img src="https://www.kampomarino.com.br/wp-content/uploads/2019/08/produto-atum.jpg"/>`
+        } else {
+            div_msg.innerHTML = `inapropriada p/ conservar alimento`
+        }
+    }
+
+</script>

@@ -1,0 +1,44 @@
+<!-- 17. Crie um programa o qual: 
+
+a) Solicita a frequência do aluno 
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele: 
+
+    A imagem de um turista, caso a frequência for menor que 50 OU 
+
+    A imagem de um aluno estudioso, caso a frequência for a partir de 50  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    qual sua frequencia?
+    <input id="inp_freq">
+
+    <button onclick="nerd()">Analisar frequência</button>
+
+    <div id="div_imagem"></div>
+</body>
+</html>
+
+<script>
+
+    function nerd()
+    {
+        var freq = Number(inp_freq.value)
+
+        if(freq > 50) 
+        {
+            div_imagem.innerHTML = `<img src="https://t3.ftcdn.net/jpg/01/22/53/88/360_F_122538873_4PtXWBeuaQdj2URrc4JcmyurDCMy1ANw.jpg" />`
+        } else 
+        {
+            div_imagem.innerHTML = `<img src="https://st3.depositphotos.com/12982378/35274/i/450/depositphotos_352740142-stock-photo-shocked-traveler-hat-backpack-holding.jpg" />`
+        }
+    }
+
+</script>
