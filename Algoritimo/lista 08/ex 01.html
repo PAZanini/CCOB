@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a nota do nosso atendimento?
+    <input type="text" id="inp_atend">
+    <button onclick="Avaliar()">Avaliar</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function Avaliar()
+    {
+        var atend = Number(inp_atend.value)
+
+        if (atend < 0 || atend > 10) 
+        {
+            div_msg.innerHTML = `${atend} Não está entre 10 e 0`
+        }
+
+        else if (atend < 5)
+        {
+            div_msg.innerHTML = `Não aprovado!`
+        }
+        
+        else if (atend >= 5 && atend <= 6)
+        {
+            div_msg.innerHTML = `Neutro`
+        }
+        
+        else if (atend > 6)
+        {
+            div_msg.innerHTML = `aprovado!`
+        }
+
+    }
+
+</script>

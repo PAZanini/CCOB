@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    Usuario
+    <input type="text" id="inp_usuario">
+    <br>
+    Senha
+    <input type="password" id="inp_senha">
+    <br>
+    <button onclick="validar()">Login</button>
+
+</body>
+</html>
+
+<script>
+
+    function validar()
+    {
+        var usuario = inp_usuario.value
+        var senha = inp_senha.value
+        var msg = "TENTE NOVAMENTE"
+
+        if((senha == 'senha123' || senha == 'senhaforte') && (usuario == 'jp' || usuario == 'admin'))
+        {
+            alert("usuario logado!")
+            console.log("passou")
+        } else
+        {
+            alert("Tente novamente")
+        }
+        
+        
+    }
+
+
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="passageiro">Qual tipo de passageiro vc é?</label>
+    <select name="passageiro" id="slc_passageiro">
+        <option value="0"></option>
+        <option value="1">comum</option>
+        <option value="2">estudante</option>
+        <option value="3">idoso/pne</option>
+    </select>
+    <br>
+    <label for="passagem">Qual tipo de passageiro vc é?</label>
+    <select name="passagem" id="slc_passagem">
+        <option value="0"></option>
+        <option value="1">Passagem comum</option>
+        <option value="2">Passagem integração</option>
+    </select>
+    <br>
+    <button onclick="sim()">Simular preço</button>
+    <br>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+
+<script>
+
+    function sim()
+    {
+        var passageiro = slc_passageiro.value
+        var passagem = slc_passagem.value
+        var valor = 4.4
+
+        
+        if(passagem == 0 || passageiro == 0)
+        {
+         div_msg.innerHTML = `valores invalidos!`   
+        } 
+
+        else if (passagem == 2) 
+        {
+            valor = 5.9
+        }
+
+        else if (passageiro == 1) 
+        {
+            div_msg.innerHTML = `Valor da passagem escolhida: R$${valor}`
+        }
+        else if (passageiro == 2) 
+        {
+            div_msg.innerHTML = `Valor da passagem escolhida: R$${valor / 2}`
+        }
+
+
+    }
+
+</script>

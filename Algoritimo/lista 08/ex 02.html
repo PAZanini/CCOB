@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sua altura? (em cm)
+    <input type="number" id="inp_altura">
+    Qual a cor do seu cabelo? (preto, loiro, vermelho ou castanho)
+    <input type="text" id="inp_cor">
+
+    <button onclick="match()">DEU MATCH?</button>
+    <div id="div_img"></div>
+</body>
+</html>
+
+<script>
+
+    function match()
+    {
+    var altura = Number(inp_altura.value)
+    var cor = inp_cor.value
+
+    if (altura < 185 && (cor == 'loiro' || cor == 'castanho')) 
+    {
+        div_img.innerHTML = `<img src="https://media.licdn.com/dms/image/v2/C4D12AQGI5JxcdYyJ9A/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1641640240362?e=2147483647&v=beta&t=1CeZV__yvPSqLCkWY7S8XDsl7Q8Aw2hFOnANw5QmZ6A" alt="cara feliz.png">`
+    } else 
+    {
+        div_img.innerHTML = `<img src="https://www.luciobissiro.com.br/wp-content/uploads/2021/10/Foto-homem-decepcionado.jpg" alt="cara triste.pg">`
+    }
+
+    }
+    
+</script>
