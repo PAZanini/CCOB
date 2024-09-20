@@ -1,0 +1,72 @@
+  body {
+    background: linear-gradient(to bottom right, #f0f0f0, #ccc, #666);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 333px;
+  }
+
+  h1 { /*Titulo*/
+    color: #333;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h3 {/*Titulos "Decimal e Converter para:"*/
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] { /*Titulo dentro da input*/
+    width: 40%;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 80px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  input[type="checkbox"] {/*Tamanho checkbox*/
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+  
+  #demo2, #demo3 {/*Resultados converções*/
+    width: 20%;
+    height: 20px;
+    font-size: 30px;
+    margin-top: 7px;
+
+  }
+  
+  #demo4 {/*Resultados converções*/
+    width: 70%;
+    height: 10px;
+    font-size: 30px;
+    margin-top: 7px;
+
+  }
+  
+  button {/*Botão*/
+    background-color: #696969;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  
+  button:hover {/*Efeito ao colocar o mouse sobre o botão*/
+    background-color: #414141;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    
+  }

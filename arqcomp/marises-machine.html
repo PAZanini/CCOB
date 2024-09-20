@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+        <h1><i>Pedro's machine</i></h1>
+
+
+        Qual a base de entrada?
+        <label for="input"></label>
+
+        <select name="input" id="slt_input">
+                <option value="0"></option>
+                <option value="1">Decimal</option>
+                <option value="2">Binario</option>
+                <option value="3">Octal</option>
+                <option value="4">Hexadecimal</option>
+        </select>
+        <br>
+        Qual o numero de entrada?
+        <input type="number" id="inp_inp">
+        <br>
+        <label for="output"></label>
+
+        Qual a base de saida?
+        <select name="output" id="slt_output">
+                <option value="0"></option>
+                <option value="1">Decimal</option>
+                <option value="2">Binario</option>
+                <option value="3">Octal</option>
+                <option value="4">Hexadecimal</option>
+        </select>
+        
+        <div id="div_resultado"></div>
+
+        <button onclick="converter()">Converter</button>
+
+<script>
+
+function converter() {
+        var entrada = Number (inp_inp.value);
+        var select_input = (slt_input.value)
+        var select_output = (slt_output.value)
+        let inp_convertido = entrada
+        let convertido = entrada // resultado
+
+
+        console.log(entrada)
+        console.log(select_input)
+        console.log(select_output)
+        console.log(convertido)
+
+
+
+        //input
+        if(select_input == 2) 
+        {
+                inp_convertido = parseInt(entrada, 2)
+        }
+
+        
+        else if(select_input == 3  ) 
+        {
+                inp_convertido = parseInt(entrada, 8)
+        }
+
+        
+        else if(select_input == 4  ) 
+        {
+                inp_convertido = parseInt(entrada, 16)
+        }
+
+        //output
+
+        if(select_output == 1) 
+        {
+                convertido = inp_convertido.toString(10);
+        }
+
+        if (select_output == 2) 
+        {
+                convertido = inp_convertido.toString(2);
+        }
+        else if (select_output == 3) 
+        {
+                convertido = inp_convertido.toString(8);
+        }
+        else if (select_output == 4) 
+        {
+                convertido = inp_convertido.toString(16);
+        }
+
+        div_resultado.innerHTML = `${convertido}`
+
+
+        console.log("///////////")
+        console.log(entrada)
+        console.log(select_input)
+        console.log(select_output)
+        console.log(convertido)
+
+}
+</script>
+</body>
+</html>
