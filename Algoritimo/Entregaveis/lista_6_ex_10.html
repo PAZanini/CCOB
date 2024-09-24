@@ -1,0 +1,69 @@
+
+<!-- EX 10 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sua idade?
+    <input type="text" id="inp_idade">
+    <br>
+    Qual seu salrio?
+    <input type="text" id="inp_sal">
+    <br>
+
+    <button onclick="analizar()">Analizar situacao</button>
+    <br>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function analizar()
+    {
+        var idade = Number(inp_idade.value)
+        var sal = Number(inp_sal.value)
+        var financa = ''
+        var maioridade = ''
+
+        if(idade < 18 && sal < 2500)
+        {
+            financa = 'liso'
+            maioridade = 'menor de idade'
+        }
+        
+        else if(idade < 18 && sal > 2500)
+        {
+            financa = 'ostentacao'
+            maioridade = 'menor de idade'
+        }
+        
+        else if(idade > 18 && sal > 2500)
+        {
+            financa = 'ostentacao'
+            maioridade = 'maior de idade'
+        }
+        
+        else if(idade > 18 && sal < 2500)
+        {
+            financa = 'liso'
+            maioridade = 'maior de idade'
+        }
+        if(idade > 18 && sal > 7000)
+        {
+            financa = 'super ostentacao'
+            maioridade = 'maior de idade'
+        }
+
+        div_msg.innerHTML = `${financa} e ${maioridade}`
+    }
+
+
+</script>
+

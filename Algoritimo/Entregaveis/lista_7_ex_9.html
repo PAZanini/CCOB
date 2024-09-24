@@ -1,0 +1,52 @@
+<!-- LISTA 7 -->
+
+<!-- EX 9 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a marca da tv?
+    <input type="text" id="inp_marca">
+    <br>
+    Qual o preco da tv??
+    <input type="text" id="inp_preco">
+    <br>
+
+    <button onclick="compra()">Analizar compra</button>
+</body>
+</html>
+
+<script>
+
+    function compra()
+    {
+        var marca = inp_marca.value
+        var preco = inp_preco.value
+
+        if(preco < 800 || preco > 2000)
+        {
+            alert("TV fora da faixa de preço")
+        }
+        else if (marca == 'Mondial' || marca == 'Britânia')
+        {
+            alert("Na faixa de preço, porém marca não confiável")
+        }
+        else if (marca == 'LG' || marca == 'Samsung')
+        {
+            alert("Essa TV pode entrar na sua lista!")
+        }
+        if(preco < 800) 
+        {
+            alert("Preço baixo demais!")
+        }
+        if (preco > 2000)
+        {
+            alert("TV cara demais, infelizmente")
+        }
+    }
+</script> 

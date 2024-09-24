@@ -1,0 +1,341 @@
+<!-- Lista 6
+
+EX 6 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Login: <br>
+    <input type="text" id="inp_login"><br>
+    Senha: <br>
+    <input type="password" id="inp_senha">
+    <br>
+    <button onclick="login()">Entrar</button>
+</body>
+</html>
+
+
+<script>
+
+    function login()
+    {
+        var user = inp_login.value
+        var senha = inp_senha.value
+
+        if (user == 'SPtech' && senha == 'digital')
+        {
+            alert("Usuário autenticado com sucesso" )
+        }else
+        {
+            alert("Falha na autenticação")
+        }
+
+    }
+
+</script> -->
+
+
+
+<!-- EX 9 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a altura maxima desejada?
+    <input type="text" id="inp_altura_max">
+    <br>
+    Qual a altura minima desejada?
+    <input type="text" id="inp_altura_min">
+    <br>
+    Qual a sua altura?
+    <input type="text" id="inp_altura">
+    <br>
+
+    <button onclick="altura()">Verificar candidato</button>
+
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+
+<script>
+
+    function altura()
+    {
+        var altura_min = Number(inp_altura_min.value)
+        var altura_max = Number(inp_altura_max.value)
+        var altura = Number(inp_altura.value)
+
+
+        if(altura_min < 1 || altura_max < altura_min)
+        {
+            alert('Intervalo da altura de seleção é inválida! A altura inicial deve ser maior que 1 e a altura final deve ser maior que a altura inicial')
+        }
+        else if (altura >= altura_min && altura <= altura_max)
+        {
+            div_msg.innerHTML += `O candidato com ${altura}m, participará do processo de seleção de piloto`
+        } else 
+        {
+            div_msg.innerHTML += `Infelizmente, o candidat, com altura de ${altura} metros, não atende os requisitos da seleção`
+        }
+    }
+
+</script> -->
+
+
+<!-- EX 10 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sua idade?
+    <input type="text" id="inp_idade">
+    <br>
+    Qual seu salrio?
+    <input type="text" id="inp_sal">
+    <br>
+
+    <button onclick="analizar()">Analizar situacao</button>
+    <br>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function analizar()
+    {
+        var idade = Number(inp_idade.value)
+        var sal = Number(inp_sal.value)
+        var financa = ''
+        var maioridade = ''
+
+        if(idade < 18 && sal < 2500)
+        {
+            financa = 'liso'
+            maioridade = 'menor de idade'
+        }
+        
+        else if(idade < 18 && sal > 2500)
+        {
+            financa = 'ostentacao'
+            maioridade = 'menor de idade'
+        }
+        
+        else if(idade > 18 && sal > 2500)
+        {
+            financa = 'ostentacao'
+            maioridade = 'maior de idade'
+        }
+        
+        else if(idade > 18 && sal < 2500)
+        {
+            financa = 'liso'
+            maioridade = 'maior de idade'
+        }
+        if(idade > 18 && sal > 7000)
+        {
+            financa = 'super ostentacao'
+            maioridade = 'maior de idade'
+        }
+
+        div_msg.innerHTML = `${financa} e ${maioridade}`
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+<!-- LISTA 7 -->
+
+<!-- EX 9 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a marca da tv?
+    <input type="text" id="inp_marca">
+    <br>
+    Qual o preco da tv??
+    <input type="text" id="inp_preco">
+    <br>
+
+    <button onclick="compra()">Analizar compra</button>
+</body>
+</html>
+
+<script>
+
+    function compra()
+    {
+        var marca = inp_marca.value
+        var preco = inp_preco.value
+
+        if(preco < 800 || preco > 2000)
+        {
+            alert("TV fora da faixa de preço")
+        }
+        else if (marca == 'Mondial' || marca == 'Britânia')
+        {
+            alert("Na faixa de preço, porém marca não confiável")
+        }
+        else if (marca == 'LG' || marca == 'Samsung')
+        {
+            alert("Essa TV pode entrar na sua lista!")
+        }
+        if(preco < 800) 
+        {
+            alert("Preço baixo demais!")
+        }
+        if (preco > 2000)
+        {
+            alert("TV cara demais, infelizmente")
+        }
+    }
+</script> -->
+
+
+
+<!-- LISTA 8
+
+EX 5 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual a temperatura?
+    <input type="text" id="inp_temp">
+
+    Qual a humidade do ar?
+    <input type="text" id="inp_ar"> <br>
+
+    <button onclick="clima()">Verificar Clima</button>
+    <br>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+
+<script>
+
+    function clima()
+    {
+        var ar = Number(inp_ar.value)
+        var temp = Number(inp_temp.value)
+
+
+        if (ar < 0)
+        {
+            alert("Valor de umidade inválido")
+        }
+        else if (temp >= 22 && temp <= 23 && ar < 60)
+        {
+            div_msg.innerHTML = `Clima agradável`
+        }
+        else 
+        {
+            div_msg.innerHTML = `Clima desconfortavel`
+        }
+    }
+
+</script> -->
+
+<!-- EX 6 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual sua nota?
+    <input type="text" id="inp_nota">
+    <br>
+    Qual sua frequencia
+    <input type="text" id="inp_freq">
+    <br>
+
+    <button onclick="analizar()">Analizar aluno</button>
+    <br>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+
+    function analizar()
+    {
+        var nota = Number(inp_nota.value)
+        var freq = Number(inp_freq.value)
+
+        if (nota < 0 || nota > 10) 
+        {
+            alert("Onde já se viu nota <0 ou >10?!")
+        }
+        else if (freq < 0 || freq > 100) 
+        {
+            alert("Onde já se viu frequência <0 ou >100?!")
+        }
+        else if(nota <= 6) 
+        {
+            div_msg.innerHTML = 'Aluno ficou abaixo da média'
+        }
+        else if(nota >= 6 && nota <= 8)
+        {
+            div_msg.innerHTML = 'Aluno ficou na média'
+        }
+        else if(nota >= 8) 
+        {
+            div_msg.innerHTML = 'Aluno acima da média'
+        }
+
+        if (freq >= 75)
+        {
+            div_msg.innerHTML += '<br> Aluno aprovado por frequência'
+        }
+        else if (freq < 75 && freq >= 0)
+        {
+            div_msg.innerHTML += '<br> Aluno reprovado por frequência'
+
+        }
+    }
+
+</script> -->

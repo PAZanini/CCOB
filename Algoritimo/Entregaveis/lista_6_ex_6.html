@@ -1,0 +1,40 @@
+<!-- Lista 6
+
+EX 6 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Login: <br>
+    <input type="text" id="inp_login"><br>
+    Senha: <br>
+    <input type="password" id="inp_senha">
+    <br>
+    <button onclick="login()">Entrar</button>
+</body>
+</html>
+
+
+<script>
+
+    function login()
+    {
+        var user = inp_login.value
+        var senha = inp_senha.value
+
+        if (user == 'SPtech' && senha == 'digital')
+        {
+            alert("Usuário autenticado com sucesso" )
+        }else
+        {
+            alert("Falha na autenticação")
+        }
+
+    }
+
+</script>
